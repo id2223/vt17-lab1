@@ -35,5 +35,6 @@ object Main {
     bank.registerTempTable("bank")
     bank.show(5)
     sqlContext.sql("select age, count(1) from bank where age < 70 group by age order by age").show()
+    sc.stop();
   }
 }
